@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Flex 布局</title>
+        <style>
+            body{
+                margin: 0;
+                height: 100vh;
+                background-color: #eee;
+            }
+            *{
+                border: 1px solid black;
+            }
+            .flex{
+                display: flex;
+            }
+            .baiSe{
+                background-color: white;
+            }
+            .flex1{
+                flex:1;
+            }
+            .column{
+                flex-direction: column;
+            }
+            .row{
+                flex-direction: row;
+            }
+            .huiHua{
+                padding: 10px 20px;
+                border-bottom:1px solid;
+            }
+        </style>
+    </head>
+    <body class="flex">
+        <!-- 侧边栏 -->
+        <div style="width: 15vw;" class="baiSe">
+            <!-- 工具栏 -->
+            <div style="padding: 10px;align-items: center;justify-content: center;border-bottom:1px solid #999;" class="flex"></div>
+            <div class="huiHua">会话</div>
+            <div class="huiHua">会话</div>
+            <div class="huiHua">会话</div>
+        </div>
+        <!-- 主区域 -->
+        <div class="flex flex1 column">
+            <!-- 头部栏 -->
+             <div style="height: 10vh;" class="baiSe"></div>
+             <!-- 内容区 -->
+             <div class="flex1"></div>
+             <div style="height: 10vh; justify-self: end;" class="baiSe"></div>
+        </div>
+    </body>
+</html>
